@@ -1,17 +1,11 @@
-import React from "react";
-import useStyles from './HomeStyles';
+import React from 'react'
 
-import { NavLink } from "react-router-dom";
-import Button from '@mui/material/Button';
 
 function Home() {
-    const classes = useStyles()
-
-    return (
-        <div className={classes.root}>
-            <h1>Hello</h1>
-        </div>
-    )
+  
+  return (
+    <div>Home</div>
+  )
 }
 
-export default Home;
+export default Home
