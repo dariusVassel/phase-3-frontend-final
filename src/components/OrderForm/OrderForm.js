@@ -1,5 +1,8 @@
 import React, {useState} from 'react'
 import {Button, TextField} from '@mui/material'
+import NavBar from '../NavBar/NavBar'
+import SendIcon from '@mui/icons-material/Send';
+
 
 
 
@@ -63,7 +66,9 @@ const OrderForm = ({pushSubmit}) => {
 
   return (
     <div>
-      <h1>OrderForm</h1>
+      <NavBar/>
+      <br/><br/><br/><br/>
+      <h1>New Order</h1>
       <form>
         <TextField fullWidth variant = "outlined" size ="small"  margin ="dense" label ="PO" name = "PO" onChange={handleFormData} value = {formData.PO}/>
         <TextField fullWidth variant = "outlined" size ="small"  margin ="dense" label ="Quantity" name = "quantity" onChange={handleFormData} value = {formData.quantity}/>
@@ -73,7 +78,7 @@ const OrderForm = ({pushSubmit}) => {
         <TextField fullWidth variant = "outlined" size ="small"  margin ="dense" label ="Date (YYMMDD)" name = "date" onChange={handleFormData} value = {formData.date}/>
         <TextField fullWidth variant = "outlined" size ="small"  margin ="dense" label ="Specification" name = "specification" onChange={handleFormData} value = {formData.specification}/>
         <br/><br/>
-        <Button color="primary" variant ="contained" onClick = {handleSubmit}>Submit Order</Button>
+        <Button color="primary" variant ="contained" onClick = {handleSubmit} endIcon={<SendIcon />}>Add Order</Button>
       </form>
     </div>
   )
